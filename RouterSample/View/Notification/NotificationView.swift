@@ -1,0 +1,29 @@
+import SwiftUI
+
+struct NotificationView: IntentBidingType {
+  @StateObject var container: Container<NotificationIntentType, NotificationModel.State>
+  var intent: NotificationIntentType { container.intent }
+  var state: NotificationModel.State { intent.state }
+  var enviroment: Enviroment { intent.enviroment }
+}
+
+extension NotificationView: View {
+  var body: some View {
+    VStack {
+      Text("NotificationView")
+        .padding()
+    }
+  }
+}
+
+extension NotificationView {
+  static func build(
+    state: NotificationModel.State,
+    intent: NotificationIntent) -> some View
+  {
+    NotificationView(container: .init(
+      intent: intent as NotificationIntentType,
+      state: state,
+      modelChangePublisher: intent.objectWillChange))
+  }
+}
