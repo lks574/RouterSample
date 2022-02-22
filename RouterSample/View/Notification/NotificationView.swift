@@ -13,6 +13,12 @@ extension NotificationView: View {
       Text("NotificationView")
         .padding()
     }
+    .onAppear {
+      print("NotificationView onAppear")
+    }
+    .onDisappear {
+      print("NotificationView onDisappear")
+    }
   }
 }
 

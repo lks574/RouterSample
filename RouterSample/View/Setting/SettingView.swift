@@ -4,7 +4,7 @@ struct SettingView: IntentBidingType {
   @StateObject var container: Container<SettingIntentType, SettingModel.State>
   var intent: SettingIntentType { container.intent }
   var state: SettingModel.State { intent.state }
-  var enviroment: Enviroment { intent.enviroment }
+  var enviroment: EnviromentType { intent.enviroment }
 }
 
 extension SettingView: View {
@@ -12,6 +12,12 @@ extension SettingView: View {
     VStack {
       Text("SettingView")
         .padding()
+    }
+    .onAppear {
+      print("SettingView onAppear")
+    }
+    .onDisappear {
+      print("SettingView onDisappear")
     }
   }
 }

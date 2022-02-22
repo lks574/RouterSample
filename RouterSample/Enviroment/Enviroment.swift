@@ -1,12 +1,14 @@
 import Dispatch
 
-struct Enviroment {
-  var navigator: DeepNaviProtocol
+protocol EnviromentType {
+
+}
+
+struct Enviroment: EnviromentType {
   var subscribeScheduler: DispatchQueue
   var receiveScheduler: DispatchQueue
 
-  init(navi: DeepNaviProtocol) {
-    navigator = navi
+  init() {
     subscribeScheduler = DispatchQueue.global()
     receiveScheduler = DispatchQueue.main
   }

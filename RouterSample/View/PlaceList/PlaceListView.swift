@@ -4,7 +4,8 @@ struct PlaceListView: IntentBidingType {
   @StateObject var container: Container<PlaceListIntentType, PlaceListModel.State>
   var intent: PlaceListIntentType { container.intent }
   var state: PlaceListModel.State { intent.state }
-  var enviroment: Enviroment { intent.enviroment }
+  var enviroment: EnviromentType { intent.enviroment }
+  var navigator: LinkNavigator { intent.navigator }
 }
 
 extension PlaceListView: View {
@@ -13,26 +14,25 @@ extension PlaceListView: View {
       Text("PlaceListView")
         .padding()
       Button {
-        enviroment.navigator.push(
-          component: .init(
-            name: Page.place.rawValue,
-            arguments: ["id": .value("3")]),
-          animated: true)
+        navigator.herf(url: "menu-tr://home/place?placeID=4587")
       } label: {
         Text("Move PlaceView")
       }
       .padding()
 
       Button {
-        enviroment.navigator.push(
-          component: DeeplinkComponent.init(
-            name: Page.setting.rawValue),
-          animated: true)
+        navigator.herf(url: "menu-tr://home/setting")
       } label: {
         Text("Move Setting")
       }
       .padding()
 
+    }
+    .onAppear {
+      print("PlaceListView onAppear")
+    }
+    .onDisappear {
+      print("PlaceListView onDisappear")
     }
   }
 }

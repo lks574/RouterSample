@@ -2,14 +2,14 @@ import Combine
 
 protocol PlaceIntentType {
   var state: PlaceModel.State { get }
-  var enviroment: Enviroment { get }
+  var enviroment: EnviromentType { get }
 
   func send(action: PlaceModel.ViewAction)
 }
 
 final class PlaceIntent: ObservableObject {
 
-  init(initialState: State, enviroment: Enviroment) {
+  init(initialState: State, enviroment: EnviromentType) {
     state = initialState
     self.enviroment = enviroment
   }
@@ -17,8 +17,8 @@ final class PlaceIntent: ObservableObject {
   typealias State = PlaceModel.State
   typealias ViewAction = PlaceModel.ViewAction
 
-  @Published var state: PlaceModel.State = .init()
-  let enviroment: Enviroment
+  @Published var state: PlaceModel.State = .defaultValue()
+  let enviroment: EnviromentType
   var cancellable: Set<AnyCancellable> = []
 }
 

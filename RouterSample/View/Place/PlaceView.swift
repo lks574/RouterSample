@@ -4,7 +4,7 @@ struct PlaceView: IntentBidingType {
   @StateObject var container: Container<PlaceIntentType, PlaceModel.State>
   var intent: PlaceIntentType { container.intent }
   var state: PlaceModel.State { intent.state }
-  var enviroment: Enviroment { intent.enviroment }
+  var enviroment: EnviromentType { intent.enviroment }
 }
 
 extension PlaceView: View {
@@ -12,6 +12,13 @@ extension PlaceView: View {
     VStack {
       Text("PlaceView")
         .padding()
+      Text("PlaceID: \(state.placeID)")
+    }
+    .onAppear {
+      print("PlaceView onAppear")
+    }
+    .onDisappear {
+      print("PlaceView onDisappear")
     }
   }
 }

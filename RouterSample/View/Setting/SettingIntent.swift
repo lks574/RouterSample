@@ -9,23 +9,26 @@ import Combine
 
 protocol SettingIntentType {
   var state: SettingModel.State { get }
-  var enviroment: Enviroment { get }
+  var enviroment: EnviromentType { get }
+  var navigator: LinkNavigator { get }
 
   func send(action: SettingModel.ViewAction)
 }
 
 final class SettingIntent: ObservableObject {
 
-  init(initialState: State, enviroment: Enviroment) {
+  init(initialState: State, enviroment: EnviromentType, navigator: LinkNavigator) {
     state = initialState
     self.enviroment = enviroment
+    self.navigator = navigator
   }
 
   typealias State = SettingModel.State
   typealias ViewAction = SettingModel.ViewAction
 
   @Published var state: SettingModel.State = .init()
-  let enviroment: Enviroment
+  let enviroment: EnviromentType
+  let navigator: LinkNavigator
   var cancellable: Set<AnyCancellable> = []
 }
 
