@@ -5,6 +5,7 @@ struct SettingView: IntentBidingType {
   var intent: SettingIntentType { container.intent }
   var state: SettingModel.State { intent.state }
   var enviroment: EnviromentType { intent.enviroment }
+  var navigator: LinkNavigator { intent.navigator }
 }
 
 extension SettingView: View {
@@ -12,6 +13,17 @@ extension SettingView: View {
     VStack {
       Text("SettingView")
         .padding()
+      Button(action: {
+        navigator.back()
+      }) {
+        Text("Back")
+      }
+      Button(action: {
+        navigator.href(url: "/notification")
+      }) {
+        Text("Move Notification")
+      }
+
     }
     .onAppear {
       print("SettingView onAppear")

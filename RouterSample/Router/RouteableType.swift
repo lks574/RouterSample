@@ -3,11 +3,14 @@ import UIKit
 import SwiftUI
 
 struct MatchURL {
-  var path: [String]
-  var flagment: String?
+  var pathes: [String]
   var query: [String: String]
 
-  static func serialzied(url: String) -> MatchURL? {
+  static func defaultValue() -> Self {
+    self.init(pathes: [], query: [:])
+  }
+
+  static func serialzied(url: String) -> Self? {
     guard let components = URLComponents(string: url) else { return .none }
 
     var compositePaths: [String] {
@@ -19,8 +22,7 @@ struct MatchURL {
     }
 
     return .init(
-      path: getPath(compositePaths),
-      flagment: getFlagment(compositePaths),
+      pathes: getPath(compositePaths),
       query: getQuery(components.queryItems))
   }
 
@@ -42,37 +44,22 @@ struct MatchURL {
   }
 }
 
-protocol RouteableType {
-  var parentRouter: RouteableType? { get }
-  var childrenRouter: [RouteableType] { get }
+protocol RouteBuildeableType {
   var matchPath: String { get }
-  func apply(historyStack: HistoryStack, match: MatchURL, navigator: LinkNavigator) -> [ViewableRouter]
-  func build(match: MatchURL, navigator: LinkNavigator) -> [ViewableRouter]
-
-  static func build(enviroment: EnviromentType) -> RouteableType
-}
-
-extension RouteableType {
-  func apply(historyStack: HistoryStack, match: MatchURL, navigator: LinkNavigator) -> [ViewableRouter] {
-    var matchingViews: [ViewableRouter] {
-      guard let findView = historyStack.stack.first(where: { $0.key == matchPath })
-      else { return build(match: match, navigator: navigator) }
-      return [findView]
-    }
-    let joinedPath = match.path.joined(separator: "/")
-    guard let subRouter = childrenRouter.first(where: { joinedPath.contains($0.matchPath) }) else {
-      return matchingViews
-    }
-
-    return matchingViews + subRouter.build(match: match, navigator: navigator)
-  }
+  var build: (EnviromentType, String, MatchURL, LinkNavigator) -> ViewableRouter { get }
 }
 
 struct ViewableRouter {
   var key: String
   var viewController: UIViewController
+  var matchURL: MatchURL
 
   static func emptyView() -> ViewableRouter {
-    .init(key: "empty", viewController: UIViewController())
+    .init(key: "empty", viewController: UIViewController(), matchURL: .defaultValue())
   }
+}
+
+protocol RouterBuildGroupType {
+  var builders: [RouteBuildeableType] { get }
+  func build(history: HistoryStack, match: MatchURL, enviroment: EnviromentType,  navigator: LinkNavigator) -> [ViewableRouter]
 }

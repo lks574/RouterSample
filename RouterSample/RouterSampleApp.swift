@@ -13,18 +13,17 @@ struct RouterSampleApp: App {
   var enviroment: Enviroment {
     Enviroment()
   }
-  var linkNavigator: LinkNavigator  {
-    LinkNavigator(enviroment: Enviroment())
-  }
+
 
   var body: some Scene {
+    let linkNavigator: LinkNavigator = LinkNavigator(enviroment: Enviroment(), routerGroup: RouterGroup())
 
     return WindowGroup {
       linkNavigator
         .replace(url: "menu-tr://home")
 //      LinkNavigator(
       .onOpenURL { url in
-        linkNavigator.herf(url: url.absoluteString)
+        linkNavigator.href(url: url.absoluteString)
 //        guard let deeplink = Deeplink(url: url, matching: "deeplink") else { return }
 //        DeeplinkHandler.push(navigator: navigator, deeplink: deeplink)
 //        print("deeplink", deeplink)

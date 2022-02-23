@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		292DA07E27C62A5A00B675AC /* RouterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292DA07D27C62A5A00B675AC /* RouterGroup.swift */; };
 		29BF0DDA27C3637B00D8F019 /* LinkNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF0DD927C3637B00D8F019 /* LinkNavigator.swift */; };
 		29BF0DDC27C3645D00D8F019 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF0DDB27C3645D00D8F019 /* RootNavigationController.swift */; };
 		29BF0DDE27C3649C00D8F019 /* HistoryStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF0DDD27C3649C00D8F019 /* HistoryStack.swift */; };
@@ -30,17 +31,11 @@
 		6B2334B127B0CB65002DD898 /* SettingIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2334B027B0CB65002DD898 /* SettingIntent.swift */; };
 		6B2334B627B0CC42002DD898 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2334B527B0CC42002DD898 /* NotificationModel.swift */; };
 		6B2334B827B0CC47002DD898 /* NotificationIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2334B727B0CC47002DD898 /* NotificationIntent.swift */; };
-		6B33E6F827C300CB007D25AB /* RootNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B33E6F727C300CB007D25AB /* RootNavigation.swift */; };
-		6B33E6FA27C30762007D25AB /* DeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B33E6F927C30762007D25AB /* DeeplinkHandler.swift */; };
 		6B33E6FC27C31C68007D25AB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B33E6FB27C31C68007D25AB /* SettingView.swift */; };
-		6B991ACC27BB9D3500F32C7C /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B991ACB27BB9D3500F32C7C /* Deeplink.swift */; };
-		6B991ACE27BB9D4400F32C7C /* DeeplinkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B991ACD27BB9D4400F32C7C /* DeeplinkComponent.swift */; };
-		6BD1F33127BCEE7400D7F0ED /* DeepNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1F33027BCEE7400D7F0ED /* DeepNavi.swift */; };
-		6BD1F33527BDE0E100D7F0ED /* NavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1F33427BDE0E100D7F0ED /* NavigationMap.swift */; };
-		6BD1F33727BDE14400D7F0ED /* DeepNaviProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1F33627BDE14400D7F0ED /* DeepNaviProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		292DA07D27C62A5A00B675AC /* RouterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterGroup.swift; sourceTree = "<group>"; };
 		29BF0DD927C3637B00D8F019 /* LinkNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkNavigator.swift; sourceTree = "<group>"; };
 		29BF0DDB27C3645D00D8F019 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		29BF0DDD27C3649C00D8F019 /* HistoryStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStack.swift; sourceTree = "<group>"; };
@@ -65,15 +60,8 @@
 		6B2334B027B0CB65002DD898 /* SettingIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingIntent.swift; sourceTree = "<group>"; };
 		6B2334B527B0CC42002DD898 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		6B2334B727B0CC47002DD898 /* NotificationIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationIntent.swift; sourceTree = "<group>"; };
-		6B33E6F727C300CB007D25AB /* RootNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigation.swift; sourceTree = "<group>"; };
-		6B33E6F927C30762007D25AB /* DeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkHandler.swift; sourceTree = "<group>"; };
 		6B33E6FB27C31C68007D25AB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		6B3790C127B23F9C007D402F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		6B991ACB27BB9D3500F32C7C /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
-		6B991ACD27BB9D4400F32C7C /* DeeplinkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkComponent.swift; sourceTree = "<group>"; };
-		6BD1F33027BCEE7400D7F0ED /* DeepNavi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepNavi.swift; sourceTree = "<group>"; };
-		6BD1F33427BDE0E100D7F0ED /* NavigationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMap.swift; sourceTree = "<group>"; };
-		6BD1F33627BDE14400D7F0ED /* DeepNaviProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepNaviProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +90,7 @@
 			children = (
 				29C86C6B27C33D51001C438F /* RouteableType.swift */,
 				29C86C6D27C33DBC001C438F /* MainRouter.swift */,
+				292DA07D27C62A5A00B675AC /* RouterGroup.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -127,10 +116,8 @@
 			children = (
 				6B2334A327B0C4B7002DD898 /* ArchetectureKit */,
 				6B23348827B0BD84002DD898 /* Assets.xcassets */,
-				6BC6B73027B10532003281D6 /* DeepLink */,
 				6B2334A027B0C402002DD898 /* Enviroment */,
 				6B3790C127B23F9C007D402F /* Info.plist */,
-				6BD1F33427BDE0E100D7F0ED /* NavigationMap.swift */,
 				6B23348A27B0BD84002DD898 /* Preview Content */,
 				29C86C6727C33C61001C438F /* Router */,
 				6B23348427B0BD83002DD898 /* RouterSampleApp.swift */,
@@ -217,43 +204,6 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
-		6B33E6F627C300BA007D25AB /* Deeplink+SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				6B33E6F727C300CB007D25AB /* RootNavigation.swift */,
-			);
-			path = "Deeplink+SwiftUI";
-			sourceTree = "<group>";
-		};
-		6BC6B73027B10532003281D6 /* DeepLink */ = {
-			isa = PBXGroup;
-			children = (
-				6B33E6F627C300BA007D25AB /* Deeplink+SwiftUI */,
-				6BD1F33227BDE0B800D7F0ED /* Deeplink */,
-				6BD1F32F27BCEE6B00D7F0ED /* Navi */,
-			);
-			path = DeepLink;
-			sourceTree = "<group>";
-		};
-		6BD1F32F27BCEE6B00D7F0ED /* Navi */ = {
-			isa = PBXGroup;
-			children = (
-				6BD1F33027BCEE7400D7F0ED /* DeepNavi.swift */,
-				6BD1F33627BDE14400D7F0ED /* DeepNaviProtocol.swift */,
-			);
-			path = Navi;
-			sourceTree = "<group>";
-		};
-		6BD1F33227BDE0B800D7F0ED /* Deeplink */ = {
-			isa = PBXGroup;
-			children = (
-				6B991ACB27BB9D3500F32C7C /* Deeplink.swift */,
-				6B991ACD27BB9D4400F32C7C /* DeeplinkComponent.swift */,
-				6B33E6F927C30762007D25AB /* DeeplinkHandler.swift */,
-			);
-			path = Deeplink;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,29 +281,23 @@
 				29C86C6E27C33DBC001C438F /* MainRouter.swift in Sources */,
 				6B23349427B0C1A9002DD898 /* PlaceListView.swift in Sources */,
 				6B2334AA27B0CA76002DD898 /* PlaceModel.swift in Sources */,
-				6B33E6F827C300CB007D25AB /* RootNavigation.swift in Sources */,
 				6B23349D27B0C309002DD898 /* PlaceListModel.swift in Sources */,
-				6B33E6FA27C30762007D25AB /* DeeplinkHandler.swift in Sources */,
 				6B23349F27B0C33F002DD898 /* PlaceListIntent.swift in Sources */,
 				29C86C6C27C33D51001C438F /* RouteableType.swift in Sources */,
 				6B2334B127B0CB65002DD898 /* SettingIntent.swift in Sources */,
 				6B2334B827B0CC47002DD898 /* NotificationIntent.swift in Sources */,
-				6B991ACC27BB9D3500F32C7C /* Deeplink.swift in Sources */,
-				6BD1F33127BCEE7400D7F0ED /* DeepNavi.swift in Sources */,
 				6B2334A527B0C4BF002DD898 /* IntentType.swift in Sources */,
 				29BF0DDA27C3637B00D8F019 /* LinkNavigator.swift in Sources */,
 				6B2334A227B0C40A002DD898 /* Enviroment.swift in Sources */,
 				6B2334AC27B0CA9A002DD898 /* PlaceIntent.swift in Sources */,
 				6B2334B627B0CC42002DD898 /* NotificationModel.swift in Sources */,
-				6B991ACE27BB9D4400F32C7C /* DeeplinkComponent.swift in Sources */,
 				6B23349627B0C1B0002DD898 /* PlaceView.swift in Sources */,
 				6B23348527B0BD83002DD898 /* RouterSampleApp.swift in Sources */,
 				29BF0DE327C485D200D8F019 /* WrappingViewController.swift in Sources */,
-				6BD1F33527BDE0E100D7F0ED /* NavigationMap.swift in Sources */,
+				292DA07E27C62A5A00B675AC /* RouterGroup.swift in Sources */,
 				29BF0DDE27C3649C00D8F019 /* HistoryStack.swift in Sources */,
 				29BF0DDC27C3645D00D8F019 /* RootNavigationController.swift in Sources */,
 				6B33E6FC27C31C68007D25AB /* SettingView.swift in Sources */,
-				6BD1F33727BDE14400D7F0ED /* DeepNaviProtocol.swift in Sources */,
 				6B2334A727B0C4CF002DD898 /* Container.swift in Sources */,
 				6B2334AF27B0CB58002DD898 /* SettingModel.swift in Sources */,
 				6B23349A27B0C1BE002DD898 /* NotificationView.swift in Sources */,

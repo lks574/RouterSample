@@ -14,19 +14,25 @@ extension PlaceListView: View {
       Text("PlaceListView")
         .padding()
       Button {
-        navigator.herf(url: "menu-tr://home/place?placeID=4587")
+        navigator.href(url: "/place?placeID=4587")
       } label: {
         Text("Move PlaceView")
       }
       .padding()
 
       Button {
-        navigator.herf(url: "menu-tr://home/setting")
+        navigator.href(url: "/notification")
+      } label: {
+        Text("Move Notification")
+      }
+      .padding()
+
+      Button {
+        navigator.href(url: "/setting")
       } label: {
         Text("Move Setting")
       }
       .padding()
-
     }
     .onAppear {
       print("PlaceListView onAppear")

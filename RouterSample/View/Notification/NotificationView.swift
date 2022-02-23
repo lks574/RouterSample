@@ -4,7 +4,7 @@ struct NotificationView: IntentBidingType {
   @StateObject var container: Container<NotificationIntentType, NotificationModel.State>
   var intent: NotificationIntentType { container.intent }
   var state: NotificationModel.State { intent.state }
-  var enviroment: Enviroment { intent.enviroment }
+  var enviroment: EnviromentType { intent.enviroment }
 }
 
 extension NotificationView: View {
